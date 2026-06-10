@@ -1,0 +1,255 @@
+import { useEffect, useState } from "react"
+
+export default function LigneScroll() {
+
+    const [width, setWidth] = useState(0)
+
+    useEffect(() => {
+
+        const handleScroll = () => {
+            const scrollTop = window.scrollY; // Position actuelle du scroll
+            const viewportHeight = window.innerHeight; // Hauteur de la fenêtre
+            const fullHeight = document.documentElement.scrollHeight; // Hauteur totale du contenu
+
+            // Calcul de la largeur de la ligne proportionnelle au scroll
+            const scrollProgress = (scrollTop / (fullHeight - viewportHeight)) * 100;
+            setWidth(scrollProgress);
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+
+    }, [])
+
+    return (
+        <div className='ligne-scroll' style={{ width: `${width}%` }}>
+            <div className='cube blanc'></div>
+            <div className='cube bleu'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube noirclair'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube rose'></div>
+            <div className='cube roseclair'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube blanc'></div>
+            <div className='cube bleuclair'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube jauneclair'></div>
+            <div className='cube bleu'></div>
+            <div className='cube blanc'></div>
+            <div className='cube rose'></div>
+            <div className='cube roseclair'></div>
+            <div className='cube noir'></div>
+            <div className='cube noirclair'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube bleuclair'></div>
+            <div className='cube rose'></div>
+            <div className='cube bleu'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube noirclair'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube rose'></div>
+            <div className='cube roseclair'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube blanc'></div>
+            <div className='cube bleuclair'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube jauneclair'></div>
+            <div className='cube bleu'></div>
+            <div className='cube blanc'></div>
+            <div className='cube rose'></div>
+            <div className='cube roseclair'></div>
+            <div className='cube noir'></div>
+            <div className='cube noirclair'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube bleuclair'></div>
+            <div className='cube rose'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube blanc'></div>
+            <div className='cube bleuclair'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube jauneclair'></div>
+            <div className='cube bleu'></div>
+            <div className='cube blanc'></div>
+            <div className='cube rose'></div>
+            <div className='cube roseclair'></div>
+            <div className='cube noir'></div>
+            <div className='cube noirclair'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube bleuclair'></div>
+            <div className='cube rose'></div>
+            <div className='cube bleu'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube noirclair'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube rose'></div>
+            <div className='cube roseclair'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube blanc'></div>
+            <div className='cube bleuclair'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube jauneclair'></div>
+            <div className='cube bleu'></div>
+            <div className='cube blanc'></div>
+            <div className='cube rose'></div>
+            <div className='cube roseclair'></div>
+            <div className='cube noir'></div>
+            <div className='cube noirclair'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube bleuclair'></div>
+            <div className='cube rose'></div>
+            <div className='cube blanc'></div>
+            <div className='cube bleu'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube noirclair'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube rose'></div>
+            <div className='cube roseclair'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube blanc'></div>
+            <div className='cube bleuclair'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube jauneclair'></div>
+            <div className='cube bleu'></div>
+            <div className='cube blanc'></div>
+            <div className='cube rose'></div>
+            <div className='cube roseclair'></div>
+            <div className='cube noir'></div>
+            <div className='cube noirclair'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube bleuclair'></div>
+            <div className='cube rose'></div>
+            <div className='cube bleu'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube noirclair'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube rose'></div>
+            <div className='cube roseclair'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube blanc'></div>
+            <div className='cube bleuclair'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube jauneclair'></div>
+            <div className='cube bleu'></div>
+            <div className='cube blanc'></div>
+            <div className='cube rose'></div>
+            <div className='cube roseclair'></div>
+            <div className='cube noir'></div>
+            <div className='cube noirclair'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube bleuclair'></div>
+            <div className='cube rose'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube blanc'></div>
+            <div className='cube bleuclair'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube jauneclair'></div>
+            <div className='cube bleu'></div>
+            <div className='cube blanc'></div>
+            <div className='cube rose'></div>
+            <div className='cube roseclair'></div>
+            <div className='cube noir'></div>
+            <div className='cube noirclair'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube bleuclair'></div>
+            <div className='cube rose'></div>
+            <div className='cube bleu'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube noirclair'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube rose'></div>
+            <div className='cube roseclair'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube blanc'></div>
+            <div className='cube bleuclair'></div>
+            <div className='cube rose'></div>
+            <div className='cube noir'></div>
+            <div className='cube jaune'></div>
+            <div className='cube jauneclair'></div>
+            <div className='cube bleu'></div>
+            <div className='cube blanc'></div>
+            <div className='cube rose'></div>
+            <div className='cube roseclair'></div>
+            <div className='cube noir'></div>
+            <div className='cube noirclair'></div>
+            <div className='cube jaune'></div>
+            <div className='cube bleu'></div>
+            <div className='cube bleuclair'></div>
+            <div className='cube rose'></div>
+        </div>
+    )
+
+}

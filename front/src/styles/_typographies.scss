@@ -1,0 +1,120 @@
+@use 'vars' as *;
+
+/* ------------------------------------------------------------------ */
+/*        FONT FACE DECLARATION
+/* ------------------------------------------------------------------ */
+
+
+
+@font-face {
+    font-family: 'Eesti';
+    src: url(../assets/fonts/GT-Eesti-Display-Regular.woff2),
+        url(../assets/fonts/GT-Eesti-Display-Regular.woff) format("woff"),
+        url(../assets/fonts/GT-Eesti-Display-Regular.ttf) format("TrueType"),
+        url(../assets/fonts/GT-Eesti-Display-Regular.otf) format("OpenType");
+}
+
+// @font-face {
+//     font-family: 'Medium';
+//     src: url(../assets/fonts/GT-Super-Text-Medium.woff2),
+//         url(../assets/fonts/GT-Super-Text-Medium.woff) format("woff");
+// }
+
+// @font-face {
+//     font-family: 'bat';
+//     src: url(../assets/fonts/SyndicatGroteskFocus-Regular.otf);
+//     font-weight: 100;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'logo';
+//     src: url(../assets/fonts/LogoFocusVF.ttf);
+//     font-weight: 100;
+//     font-style: normal;
+// }
+
+.type-36 {
+
+    font-family: 'Eesti', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 18px;
+    letter-spacing: 3%;
+    text-align: center;
+
+}
+
+.type-32 {
+
+    font-family: 'Eesti', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 3%;
+
+}
+
+.type-28 {
+
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 3%;
+
+    @include sizeone {
+
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 27px;
+        letter-spacing: 3%;
+
+    }
+
+}
+
+.type-21 {
+
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 3%;
+    text-align: center;
+
+}
+
+.type-13 {
+
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 3%;
+
+}
+
+.type-11 {
+
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 17px;
+    letter-spacing: 3%;
+
+}
+
+.type-9 {
+
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 3%;
+
+    // @include sizeone {
+
+    //     font-weight: 400;
+    //     font-size: 9px;
+    //     line-height: 12px;
+    //     letter-spacing: 3%;
+
+    // }
+
+}

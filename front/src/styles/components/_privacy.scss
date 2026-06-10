@@ -1,0 +1,61 @@
+@use '../vars' as *;
+
+.policy {
+
+    margin: 13px;
+    margin-top: 126px;
+    margin-bottom: 169px;
+
+    h1 {
+
+        text-transform: uppercase;
+        margin-bottom: 15px;
+
+    }
+
+    p {
+
+        margin-bottom: 15px;
+
+    }
+
+    li {
+
+        text-indent: 10px;
+
+        p {
+            margin-bottom: 0px;
+
+            &:before {
+                content: "•";
+                margin-right: 10px;
+            }
+        }
+
+        li {
+            text-indent: 25px;
+        }
+    }
+
+    strong {
+
+        // text-decoration: underline;
+        font-weight: 700;
+
+    }
+
+    .content {
+        column-count: 3;
+        /* Nombre de colonnes */
+        column-gap: 13px;
+        /* Espacement entre les colonnes */
+
+        @include sizeone {
+
+            column-count: 1;
+            column-gap: 0;
+
+        }
+    }
+
+}

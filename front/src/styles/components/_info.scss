@@ -1,0 +1,174 @@
+@use '../vars' as *;
+
+.info {
+
+    background-color: $noir;
+    min-height: 100vh;
+    color: $blanc;
+    padding: 13px;
+    padding-top: 136px;
+
+    max-width: 716px;
+    margin: 0 auto;
+
+    .description-wrapper {
+
+        font-size: 17px;
+        line-height: 22px;
+        margin-bottom: 52px;
+        letter-spacing: 3%;
+
+        p {
+
+            margin-bottom: 20px;
+
+            &:last-child {
+
+                margin-bottom: 0px;
+            }
+
+        }
+
+    }
+
+    @include sizeone {
+
+        min-height: calc(100 * var(--vh));
+
+        position: relative;
+        padding-bottom: 118px;
+    }
+
+    &-footer {
+
+        margin-top: 52px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 13px;
+
+        @include sizeone {
+
+            grid-template-columns: 1fr;
+            margin-top: 65px;
+
+        }
+
+        label {
+
+            text-transform: uppercase;
+            margin-bottom: 20px;
+
+        }
+
+        &-item {
+
+            margin-bottom: 20px;
+
+        }
+
+    }
+
+    .info-footer_contact-headoffice-links {
+
+        display: flex;
+
+    }
+
+    .info-footer-item.info-footer_specifications-services ul {
+
+        display: flex;
+        flex-wrap: wrap;
+        text-transform: uppercase;
+
+        li {
+
+            margin-right: 4px;
+
+            &::after {
+
+                content: ' • ';
+            }
+
+            &:last-child::after {
+
+                content: '';
+            }
+        }
+
+    }
+
+    .info-footer_specifications {
+
+
+        label {
+
+            text-transform: none;
+
+        }
+    }
+
+    .info-footer_contact {
+
+        label {
+
+            font-size: 11px;
+
+        }
+
+        &-locations {
+
+
+            label {
+
+                text-transform: none;
+            }
+
+        }
+
+    }
+
+    .tagline {
+
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        color: $bleu;
+        margin-top: 89px;
+
+        @include sizeone {
+
+            bottom: 114px;
+
+        }
+
+    }
+
+    &-rse {
+
+        display: flex;
+        align-items: baseline;
+
+        @include sizeone {
+
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        p {
+
+            width: fit-content
+        }
+
+        a {
+
+            margin-left: 10px;
+
+            @include sizeone {
+
+                margin-left: 0px;
+            }
+
+        }
+    }
+
+}

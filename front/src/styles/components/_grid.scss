@@ -1,0 +1,123 @@
+@use '../vars' as *;
+
+.grid {
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row: 13px;
+    margin: 13px;
+
+    @include sizeone {
+
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .grid-1 {
+
+        grid-column: span 3;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .grid-3 {
+
+        grid-column: span 1;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 13px;
+
+        @include sizeone {
+
+            grid-template-columns: repeat(1, 1fr);
+
+            .empty {
+
+                display: none;
+
+            }
+
+        }
+
+    }
+
+    .column {
+
+        display: grid;
+        margin-bottom: 13px;
+        grid-column: span 1;
+
+    }
+
+    .grid-item {
+
+        img {
+
+            object-fit: cover;
+
+        }
+
+        .images-wrapper {
+
+            display: grid;
+            margin-bottom: 13px;
+
+            @include sizeone {
+
+                width: calc(100vw - 26px);
+                overflow: hidden;
+
+            }
+
+        }
+
+        .full {
+
+            grid-template-columns: repeat(1, 1fr);
+
+        }
+
+        .half {
+
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 13px;
+
+        }
+
+        .third {
+
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 13px;
+
+        }
+
+        .fourth {
+
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 13px;
+
+            flex-wrap: wrap;
+
+        }
+
+    }
+
+    .grid-3 {
+
+        @include sizeone {
+
+            margin-bottom: 0px;
+
+        }
+
+        .grid-item {
+
+            @include sizeone {
+
+                margin-bottom: 13px;
+
+            }
+        }
+
+    }
+
+}

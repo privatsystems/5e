@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.cinq-étoiles.eu
+
+# Sitemaps
+Sitemap: https://www.cinq-étoiles.eu/sitemap.xml

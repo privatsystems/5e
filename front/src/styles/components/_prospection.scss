@@ -1,0 +1,174 @@
+@use '../vars' as *;
+
+.password-container {
+
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 230px;
+    min-height: calc(100vh - 356px);
+
+
+    @include sizeone {
+
+        height: calc((100 * var(--vh)) - 230px);
+
+    }
+
+    .password-form {
+
+        height: fit-content;
+        width: fit-content;
+
+        input {
+
+            max-width: 1000px;
+            border: 0px solid transparent;
+            border-radius: 0px;
+            text-align: center;
+
+            &::placeholder {
+
+                color: $gris;
+                text-align: center;
+
+            }
+        }
+
+    }
+
+}
+
+.wrapper-prospection {
+
+    top: -50vh;
+
+    @include sizeone {
+
+        top: -100vh;
+
+    }
+
+}
+
+.title-prospection {
+
+    // position: sticky;
+    // top: 136px;
+    // left: 0px;
+    z-index: 1000;
+    mix-blend-mode: difference;
+    color: $blanc;
+    width: 100%;
+    text-align: center;
+    margin-top: 135px;
+
+    transition: opacity 0.3s;
+
+}
+
+.intro-prospection {
+
+    max-width: 1080px;
+    padding: 13px;
+    margin: 100px auto;
+    text-align: left;
+    position: relative;
+    z-index: 10000;
+
+    p {
+
+        padding-bottom: 20px;
+
+        &:last-child {
+
+            padding-bottom: 0;
+
+        }
+
+    }
+
+}
+
+section {
+
+    min-height: unset;
+
+}
+
+.prospection-credits {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0px;
+    position: relative;
+    z-index: 1000;
+    margin-bottom: 200px;
+
+    .get {
+
+        margin-top: 57px;
+        margin-bottom: 0px;
+
+    }
+
+    @include sizeone {
+
+        margin-top: 226px;
+
+    }
+}
+
+.share-part {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    cursor: pointer;
+
+    img {
+
+        margin-bottom: 21px !important;
+
+    }
+
+}
+
+.footer_text-prospection {
+
+    display: flex;
+    column-gap: 35px;
+    text-align: left;
+    margin: 13pt;
+    margin-top: 94px;
+    position: relative;
+    z-index: 100000;
+
+    @include sizeone {
+
+        flex-direction: column;
+
+        p {
+
+            margin-top: 13px;
+
+        }
+
+    }
+
+    a {
+
+        color: $gris;
+
+        &:hover {
+
+            color: $bleu;
+
+        }
+
+    }
+
+}

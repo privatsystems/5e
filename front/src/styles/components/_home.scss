@@ -1,0 +1,187 @@
+@use '../vars' as *;
+
+.home {
+
+    padding-top: 130px;
+
+    @include sizeone {
+
+        margin-top: 130px;
+        padding-top: 0px;
+
+    }
+
+    .headquarters {
+
+        .texts_part {
+
+            background-color: white;
+            padding: 136px 20px;
+            margin-bottom: 0px;
+
+            @include sizeone {
+
+                padding: 0px;
+                margin: 0px;
+
+            }
+
+            &-item {
+
+                @include sizeone {
+
+                    padding: 40px;
+                    width: 100%;
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .ligne-scroll {
+
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: calc(100vw - 13px);
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        height: 13px;
+        width: 0%;
+        /* Initialement 0% */
+        transition: width 0.1s ease-out;
+        z-index: 1;
+        /* Douce transition */
+
+        .cube {
+
+            width: 13px;
+            height: 13px;
+
+        }
+
+    }
+
+    .carousel-mini-wrapper {
+
+        display: flex;
+        height: 63.5px;
+        width: fit-content;
+        position: relative;
+        overflow: hidden;
+
+        .count {
+
+            height: fit-content;
+            margin-right: 3px;
+
+        }
+
+    }
+
+    .carousel-mini {
+
+        max-width: calc(((100vw - 26px) / 3) - 35px);
+        width: fit-content;
+        height: 60px;
+        display: flex;
+        overflow: scroll;
+        // position: relative;
+        top: 3.5px;
+        scrollbar-width: none;
+        /* Pour Firefox */
+        -ms-overflow-style: none;
+        /* Pour IE/Edge */
+        position: relative;
+
+        @include sizeone {
+
+            max-width: calc(100vw - 51px);
+
+        }
+
+        img,
+        video,
+        .playerItem {
+
+            height: 60px !important;
+            width: auto !important;
+
+        }
+
+        &::-webkit-scrollbar {
+
+            display: none;
+            /* Pour Chrome/Safari */
+
+        }
+    }
+
+    .scroll-bar {
+        position: absolute;
+        bottom: 0;
+        left: 22px;
+        height: 3px;
+        width: 0%;
+        background-color: grey;
+        transition: width 0.1s ease-out;
+    }
+
+}
+
+.grid-1 {
+
+    .carousel-mini {
+
+        max-width: calc(100vw - 46px);
+
+    }
+
+}
+
+.intro {
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include sizeone {
+
+        height: calc(100 * var(--vh));
+    }
+
+    img {
+
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+
+        @include sizeone {
+
+            min-height: calc(100 * var(--vh));
+
+        }
+
+    }
+
+}
+
+.intror::-webkit-scrollbar {
+    display: none;
+}
+
+.intror {
+    -ms-overflow-style: none; // IE 10+
+    overflow: -moz-scrollbars-none; // Firefox
+}

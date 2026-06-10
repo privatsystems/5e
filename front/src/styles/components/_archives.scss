@@ -1,0 +1,149 @@
+@use '../vars' as *;
+
+.archives {
+
+    margin-top: 136px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-years {
+
+        // width: fit-content;
+
+    }
+
+    h2 {
+
+        margin-top: 26px;
+        margin-bottom: 26px;
+        text-align: center;
+
+    }
+
+    &-item {
+
+        &-title {
+
+            display: flex;
+            grid-gap: 15px;
+            cursor: pointer;
+
+            @include sizeone {
+
+                grid-gap: 10px;
+
+            }
+
+            .first-col,
+            .seg-col {
+
+                display: flex;
+                width: calc(50vw - 5px);
+
+            }
+
+            .first-col {
+
+                justify-content: end;
+                align-items: baseline;
+
+                @include sizeone {
+
+                    flex-direction: column;
+
+                }
+
+                p {
+
+                    margin-left: 5px;
+                }
+
+            }
+
+            p {
+
+                display: block;
+
+                @include sizeone {
+
+                    width: calc(50vw - 10px);
+
+                }
+
+                &:first-child {
+
+                    text-align: right;
+
+                }
+
+                &:last-child {
+
+                    @include sizeone {
+
+                        text-align: right;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+
+        &-images {
+
+            display: flex;
+            align-items: center;
+            grid-gap: 6px;
+            align-items: flex-end;
+            justify-content: center;
+            grid-auto-flow: column;
+            flex-wrap: wrap;
+
+            margin-top: 12px;
+            margin-bottom: 12px;
+
+
+            .grid-index-item-image {
+
+                width: calc(100vw / 12);
+
+            }
+
+            @include sizethree {
+
+                .grid-index-item-image {
+
+                    width: calc(100vw / 9);
+
+                }
+
+            }
+
+            @include sizetwo {
+
+                .grid-index-item-image {
+
+                    width: calc(100vw / 6);
+
+                }
+
+            }
+
+            @include sizetwo {
+
+                .grid-index-item-image {
+
+                    width: calc(100vw / 4);
+
+                }
+
+            }
+
+        }
+    }
+
+}

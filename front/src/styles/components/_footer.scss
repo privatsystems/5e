@@ -1,0 +1,363 @@
+@use '../vars' as *;
+
+.footer {
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 13px;
+    border-top: 1px solid $noir;
+    padding-top: 18px;
+    margin-bottom: 13px;
+    z-index: 100000000;
+    position: relative;
+
+    &_reference {
+
+        margin-top: 100px;
+
+    }
+
+    &_reference.overview {
+
+        margin-top: 0px;
+
+        .footer {
+
+            margin-top: 0px;
+
+        }
+
+    }
+
+    label {
+
+        cursor: auto;
+        margin-bottom: 17px;
+        text-transform: uppercase;
+
+        @include sizeone {
+
+            margin-bottom: 0px;
+
+        }
+
+    }
+
+    &-item {
+
+        display: flex;
+        flex-direction: column;
+        margin: 0px 6.5px;
+
+        @include sizeone {
+            margin-left: 0px;
+        }
+
+        &:first-child {
+            margin-left: 0px;
+
+        }
+
+        &:last-child {
+            margin-right: 0px;
+
+        }
+
+    }
+
+    &-1 {
+
+        grid-column: auto / span 2;
+
+        img {
+
+            max-width: 159px;
+            height: auto;
+
+        }
+
+    }
+
+    &-2,
+    &-3,
+    &-4 {
+
+        grid-column: auto / span 1;
+
+        position: relative;
+
+        text-align: center;
+
+        @include sizeone {
+
+            position: static;
+            width: fit-content;
+
+        }
+
+        .footer-item-faceb {
+
+            display: none;
+
+        }
+
+        &:hover {
+
+            .footer-item-facea {
+                display: none;
+            }
+
+            .footer-item-faceb {
+                display: block;
+            }
+
+        }
+
+    }
+
+    &-5 {
+
+        grid-column: auto / span 5;
+
+        .f-insta {
+
+            display: block;
+            position: absolute;
+            top: -2px;
+            right: 0px;
+
+        }
+
+        .f-contact {
+
+            display: block;
+            position: absolute;
+            top: -2px;
+            left: 0px;
+
+        }
+
+        ul {
+
+            display: flex;
+            justify-content: center;
+
+            li {
+
+                margin: 0px 8px;
+            }
+
+        }
+
+    }
+
+    &-6 {
+
+        grid-column: auto / span 2;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-end;
+
+        @include sizeone {
+
+            align-items: center;
+            align-items: center;
+
+        }
+
+        ul {
+
+            display: flex;
+            justify-content: flex-end;
+
+            li {
+
+                margin: 0px 8px;
+
+                &:first-child {
+                    margin-left: 0px;
+                }
+
+                &:last-child {
+                    margin-right: 0px;
+                }
+
+            }
+        }
+
+        .face-b {
+
+            width: 235px;
+            display: flex !important;
+            top: -2px;
+            right: 0px;
+
+            a {
+
+                margin: 0px 8px;
+
+                &:first-child {
+                    margin-left: 0px;
+                }
+
+                &:last-child {
+                    margin-right: 0px;
+                    width: max-content;
+
+                    p {
+
+                        width: max-content;
+
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+    .mirror {
+
+        position: relative;
+
+        .face-b {
+            opacity: 0;
+            position: absolute;
+        }
+
+        &:hover {
+
+            .face-a {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .face-b {
+                display: block;
+                opacity: 1;
+            }
+
+        }
+    }
+
+    .creditsfooter {
+
+        .mirror {
+
+            @include sizeone {
+
+                pointer-events: none;
+
+
+            }
+
+        }
+
+    }
+
+    .creditsfooter.show {
+
+        .mirror {
+            @include sizeone {
+
+                pointer-events: auto;
+
+            }
+        }
+
+        .face-a {
+
+            @include sizeone {
+
+                display: none;
+
+            }
+        }
+
+        .face-b {
+            @include sizeone {
+
+                display: block;
+
+            }
+        }
+    }
+
+}
+
+.footer-mob {
+
+    display: flex;
+    flex-direction: column;
+    grid-gap: 13px;
+    padding-top: 25px;
+
+    .footer-1 {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 12px;
+
+    }
+
+    .footer-item {
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &_right {
+
+        display: flex;
+        flex-direction: column;
+
+        &_menu {
+
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+        }
+
+        .footer-2,
+        .footer-3,
+        .footer-4 {
+            width: fit-content;
+        }
+
+    }
+
+    &_contact {
+
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .footer-credits {
+
+        display: flex;
+
+        a {
+
+            margin: 0px 8px;
+            margin-bottom: 2px;
+
+        }
+
+    }
+
+    &_left {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+}

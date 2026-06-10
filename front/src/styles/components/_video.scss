@@ -1,0 +1,96 @@
+* {
+
+    --_accent-color: #00D0FF;
+
+}
+
+.react-player {
+    display: flex;
+    justify-content: center;
+}
+
+.playerItem {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+mux-player {
+    --seek-backward-button: none;
+    --seek-forward-button: none;
+    /* Hide all controls at once */
+    // --controls: none;
+
+    /* Hide the error dialog */
+    --dialog: none;
+
+    /* Hide the loading indicator */
+    --loading-indicator: none;
+
+    /* Target all sections by excluding the section prefix */
+    --play-button: none;
+    --live-button: none;
+    --seek-backward-button: none;
+    --seek-forward-button: none;
+    --captions-button: none;
+    --airplay-button: none;
+    --pip-button: none;
+    // --fullscreen-button: none;
+    --cast-button: none;
+    --playback-rate-button: none;
+    --volume-range: none;
+    // --time-range: none;
+    // --time-display: none;
+    // --duration-display: none;
+    --rendition-menu-button: none;
+    --media-time-range-hover-height: 1px;
+    --media-range-track-height: 1px;
+    --media-range-track-width: calc(100% - 12px);
+    --media-range-padding-left: 6px;
+    --media-accent-color: #00D0FF;
+    /* Target a specific section by prefixing the CSS var with (top|center|bottom) */
+    // --center-controls: none;
+    --bottom-play-button: none;
+
+    --media-object-fit: cover;
+    --media-object-position: center;
+    max-width: calc(100vw);
+    overflow: hidden;
+    object-fit: cover;
+}
+
+mux-player.mini {
+    --seek-backward-button: none;
+    --seek-forward-button: none;
+    /* Hide all controls at once */
+    --controls: none;
+
+    /* Hide the error dialog */
+    --dialog: none;
+
+    /* Hide the loading indicator */
+    --loading-indicator: none;
+
+    /* Target all sections by excluding the section prefix */
+    --play-button: none;
+    --live-button: none;
+    --seek-backward-button: none;
+    --seek-forward-button: none;
+    --mute-button: none;
+    --captions-button: none;
+    --airplay-button: none;
+    --pip-button: none;
+    --fullscreen-button: none;
+    --cast-button: none;
+    --playback-rate-button: none;
+    --volume-range: none;
+    --time-range: none;
+    --time-display: none;
+    --duration-display: none;
+    --rendition-menu-button: none;
+
+    /* Target a specific section by prefixing the CSS var with (top|center|bottom) */
+    --center-controls: none;
+    --bottom-play-button: none;
+}

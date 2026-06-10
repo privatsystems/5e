@@ -1,0 +1,66 @@
+@use '../vars' as *;
+
+.search {
+
+    &_wrapper {
+
+        margin-top: 238px;
+        min-height: calc(100vh - 370px);
+
+        @include sizeone {
+
+            min-height: calc((100 * var(--vh)) - 270px);
+
+        }
+
+    }
+
+    &_form {
+
+        width: fit-content;
+        margin: auto;
+
+        input {
+
+            max-width: 1000px;
+            border: 0px solid transparent;
+            border-radius: 0px;
+            text-align: center;
+
+            &::placeholder {
+
+                color: $gris;
+                text-align: center;
+
+            }
+        }
+    }
+
+    &_results {
+
+        width: fit-content;
+        margin: auto;
+        margin-top: 40px;
+        color: $gris;
+
+        h3:hover {
+
+            color: $noir;
+            cursor: pointer;
+
+        }
+    }
+
+    &__result {
+
+        padding: 3px;
+        cursor: pointer;
+
+    }
+
+    &_selected {
+
+        margin-top: 75px;
+
+    }
+}
