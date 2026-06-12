@@ -24,7 +24,7 @@ type Props = {
   footerData: ContactData;
 };
 
-const Home: FC<Props> = ({ initialData, footerData }) => {
+export const Home: FC<Props> = ({ initialData, footerData }) => {
   const data = initialData;
   const loading = false;
   const { setShowLogo, showLogo, showNav, setShowNav, once } = useIntroStore();
@@ -190,15 +190,16 @@ export const getServerSideProps = async () => {
     const initialData = await fetchHomeData(1, 100);
     const footerData = await fetchFooterData();
     return {
-      props: {
-        initialData,
-        footerData
-      }
+      props: { initialData, footerData }
     };
   } catch (error) {
-    console.log(error)
-    return { props: { initialData: null } };
+    console.error("getServerSideProps error:", error);
+    return {
+      props: {
+        initialData: null,
+        footerData: null,
+        error: error instanceof Error ? error.message : "Erreur inconnue"
+      }
+    };
   }
 };
-
-export default Home;
