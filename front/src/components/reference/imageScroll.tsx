@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { hover, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import recognizeSrcType from '@/util/recognizeSrcType';
 import PlayerItem from '../videos/PlayerItem';
@@ -150,9 +150,11 @@ export default function ImageScroll({
                         onLoad={() => {
                             handleLoad(index);
                             if (imageElRef.current && !initialHeight) {
-                                index == 1
-                                    ? setInitialHeight(imageElRef.current.clientHeight)
-                                    : setInitialHeight(imageElRef.current.clientHeight)
+                                if (index == 1) {
+                                    setInitialHeight(imageElRef.current.clientHeight);
+                                } else {
+                                    setInitialHeight(imageElRef.current.clientHeight);
+                                }
                             }
                         }}
                     />

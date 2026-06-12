@@ -51,12 +51,6 @@ export default function GridIndexSmallItem({
             : "8vw"
         : "8vw"
 
-    const quality = isClient
-        ? isMob
-            ? 30
-            : 80
-        : undefined // 👈 laisse Next gérer (75)
-
     // Guards
     const hasImageThumbnail =
         item.thumbnail &&
