@@ -1,0 +1,18 @@
+[2mVercel CLI 54.12.2 (Node.js 21.1.0)[22m
+[2mVercel CLI 54.12.2 (Node.js 21.1.0)[22m
+[33m[1mWARNING! [22mBuild not running on Vercel. System environment variables will not be available.[39m
+[33m[1mWARNING! [22mBuild not running on Vercel. System environment variables will not be available.[39m
+
+
+> Build optimization failed: found page without a React Component as default export in 
+pages/
+
+See https://nextjs.org/docs/messages/page-without-valid-component for more info.
+
+> Build optimization failed: found page without a React Component as default export in 
+pages/
+
+See https://nextjs.org/docs/messages/page-without-valid-component for more info.
+
+[?25h[?25h[31mError:[39m Command "npm run build" exited with 1
+[31mError:[39m Command "npm run build" exited with 1

@@ -12,7 +12,7 @@ export interface RseData {
 export const fetchRseData = async (): Promise<RseData> => {
     try {
 
-        const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://5e-alpha.vercel.app';
+        const apiBaseUrl = 'https://5e-six.vercel.app';
 
         const res = await fetch(`${apiBaseUrl}/api/proxy/fetchDataRse`, {
             method: "GET",
