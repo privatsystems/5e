@@ -10,21 +10,13 @@ export type yearReference = {
     references: archivesReference[];
 };
 
-
 export const fetchArchivesData = async (): Promise<yearReference[]> => {
     try {
-
-        const apiBaseUrl = 'https://5e-six.vercel.app';
-
-        const res = await fetch(`${apiBaseUrl}/api/proxy/fetchDataArchives`, {
+        const res = await fetch('https://back.5eproductions.com/archives.json', {
             method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-            },
-
-        })
-
-        if (!res.ok) throw new Error("Erreur de chargement")
+            headers: { "Content-Type": "application/json" },
+        });
+        if (!res.ok) throw new Error("Erreur de chargement");
         return res.json();
     } catch (e) {
         console.error(e);

@@ -43,18 +43,11 @@ export type ProspectionPageData = {
 
 export const fetchSecretPageData = async (slug: string | string[] | undefined): Promise<ProspectionPageData> => {
     try {
-
-        const apiBaseUrl = 'https://5e-six.vercel.app';
-
-        const res = await fetch(`${apiBaseUrl}/api/proxy/fetchDataSecretPage?slug=${slug}`, {
+        const res = await fetch(`https://back.5eproductions.com/${slug}.json`, {
             method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-            },
-
-        })
-
-        if (!res.ok) throw new Error("Erreur de chargement")
+            headers: { "Content-Type": "application/json" },
+        });
+        if (!res.ok) throw new Error("Erreur de chargement");
         return res.json();
     } catch (e) {
         console.error(e);

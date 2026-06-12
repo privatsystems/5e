@@ -8,11 +8,9 @@ export interface PageData {
 }
 
 export interface CreditData {
-
     label: string;
     text: string;
     tags: PageData[];
-
 }
 
 interface imageData {
@@ -48,22 +46,13 @@ export interface ReferenceData {
     prev_reference: nextData | null;
 }
 
-
 export const fetchReferenceData = async (reference: string | string[] | undefined): Promise<ReferenceData> => {
     try {
-
-        const apiBaseUrl = 'https://5e-six.vercel.app';
-
-        const res = await fetch(`${apiBaseUrl}/api/proxy/fetchDataReference?reference=${reference}`, {
+        const res = await fetch(`https://back.5eproductions.com/references/${reference}.json`, {
             method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-            },
-
-        })
-        console.log("🏞️", `${apiBaseUrl}/api/proxy/fetchDataReference?reference=${reference}`)
-
-        if (!res.ok) throw new Error("Erreur de chargement")
+            headers: { "Content-Type": "application/json" },
+        });
+        if (!res.ok) throw new Error("Erreur de chargement");
         return res.json();
     } catch (e) {
         console.error(e);

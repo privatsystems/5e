@@ -7,18 +7,11 @@ export interface ReferencesData {
 
 export const fetchReferencesList = async (): Promise<ReferencesData> => {
     try {
-
-        const apiBaseUrl = 'https://5e-six.vercel.app';
-
-        const res = await fetch(`${apiBaseUrl}/api/proxy/fetchListReferences`, {
+        const res = await fetch('https://back.5eproductions.com/references.json', {
             method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-            },
-
-        })
-
-        if (!res.ok) throw new Error("Erreur de chargement")
+            headers: { "Content-Type": "application/json" },
+        });
+        if (!res.ok) throw new Error("Erreur de chargement");
         return res.json();
     } catch (e) {
         console.error(e);
