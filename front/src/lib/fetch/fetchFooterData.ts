@@ -30,25 +30,16 @@ export interface ContactData {
 
 export const fetchFooterData = async (): Promise<ContactData> => {
     try {
-
-        const apiBaseUrl = 'https://5e-six.vercel.app';
-
-        const res = await fetch(`${apiBaseUrl}/api/proxy/fetchDataFooter`, {
+        const res = await fetch('https://back.5eproductions.com/contact.json', {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
             },
-
-        })
-
-        console.log('fetchFooter', `${apiBaseUrl}/api/proxy/fetchDataFooter`, res.status);
-
-
-        if (!res.ok) throw new Error("Erreur de chargement")
+        });
+        if (!res.ok) throw new Error("Erreur de chargement");
         return res.json();
     } catch (e) {
         console.error(e);
         throw new Error("Erreur de chargement");
     }
-
 };
