@@ -1,21 +1,17 @@
+
 import { PaginatedResponse } from "@/types/home";
 
 export const fetchHomeData = async (page: number, limit?: number): Promise<PaginatedResponse> => {
     try {
-
-        const apiBaseUrl = 'https://5e-six.vercel.app';
-
-        const res = await fetch(`${apiBaseUrl}/api/proxy/fetchDataHome?page=${page}&limit=${limit}`, {
+        const res = await fetch(`https://back.5eproductions.com/home.json?page=${page}&limit=${limit || 100}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
             },
+            signal: AbortSignal.timeout(50000),
+        });
 
-        })
-
-        console.log('fetchHomeData', `${apiBaseUrl}/api/proxy/fetchDataHome?page=${page}&limit=${limit}`, res.status);
-
-        if (!res.ok) throw new Error("Erreur de chargement")
+        if (!res.ok) throw new Error("Erreur de chargement");
         return res.json();
     } catch (e) {
         console.error('😮‍💨', e);
