@@ -38,7 +38,7 @@ export default function Presentation({ data, footerData }: SecretProps) {
     const share = useRouter();
     const messageRef = useRef<HTMLSpanElement>(null);
 
-    const base = "https://www.5eproductions.com";
+    const base = "https://5e-alpha.vercel.app";
 
     const links = base + share.asPath;
     const copylink = () => {

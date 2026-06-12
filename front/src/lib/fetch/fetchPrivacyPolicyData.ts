@@ -4,7 +4,7 @@ import { PolicyData } from "./fetchLegalNoticeData";
 export const fetchPrivacyPolicyData = async (): Promise<PolicyData> => {
     try {
 
-        const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://www.5eproductions.com';
+        const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://5e-alpha.vercel.app';
 
         const res = await fetch(`${apiBaseUrl}/api/proxy/fetchDataPrivacyPolicy`, {
             method: "GET",
