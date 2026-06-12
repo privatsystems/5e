@@ -4,7 +4,7 @@ import Transition from "@/components/transition";
 import { ContactData, fetchFooterData } from "@/lib/fetch/fetchFooterData";
 import { fetchIndexData, IndexResponse } from "@/lib/fetch/fetchIndexData";
 import { useGeneralStore } from "@/lib/stores/useGeneralStore";
-import { useCallback, useEffect, useState, useMemo, useRef } from "react";
+import { useCallback, useEffect, useState, useRef } from "react";
 import NavIndex from "@/components/index/navIndex";
 import { fetchMenuData } from "@/lib/fetch/fetchMenuData";
 import GridIndexSmall from "@/components/index/gridIndexSmall";
@@ -53,13 +53,6 @@ export default function Index({ initialData, footerData }: IndexProps) {
     const slugTalents = nameTalents.slug;
 
     const totalPages = datas.pagination.total_pages;
-
-    // ✅ Déduplication helper
-    const dedupe = (items: any[]) => {
-        return Array.from(
-            new Map(items.map(item => [item.id, item])).values()
-        );
-    };
 
     // ✅ FETCH PAGE (safe)
     const fetchPage = useCallback(async (newPage: number) => {
